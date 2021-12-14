@@ -1,0 +1,52 @@
+.usuarios{
+    flex: 6;
+    padding: 30px;
+    
+}
+
+.add{
+    margin-bottom: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.add:hover{
+    color: white;
+    background-color: #2c69a6;
+    transition: 0.2s;
+}
+
+.userListEdit{
+    border: none;
+    color:#3bb077;
+    border-radius: 3px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.userListEdit:hover{
+    color: white;
+    background-color: #3bb077;
+    transition: 0.2s;
+}
+
+.userListDelete{
+    border-radius: 3px;
+    color: red;
+    cursor: pointer;
+}
+.userListDelete:hover{
+    color: white;
+    background-color: red;
+    transition: 0.2s;
+}
+
+.userListLocation{
+    margin-left: 20px;
+    border-radius: 3px;
+    color: #2c69a6;
+    cursor: pointer;
+}
+.userListLocation:hover{
+    color: white;
+    background-color: #2c69a6;
+    transition: 0.2s;
+}

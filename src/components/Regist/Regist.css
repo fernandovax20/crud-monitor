@@ -1,0 +1,84 @@
+
+.wave-wraper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../../img/background.jpg');
+    overflow: hidden;
+    
+    
+    
+}
+.alerta{
+    color: grey;
+    margin-bottom: 10px;
+}
+.card{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    animation: transitionIn 0.75s
+}
+
+.wave-wraper .wave{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('../../img/wave.png');
+    background-size: 1000px 100px;
+
+}
+
+.wave-wraper .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom:0;
+}
+.wave-wraper .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+.wave-wraper .wave.wave3{
+    animation: animate 30s linear infinite;
+    z-index: 995;
+    opacity: 0.2;
+    animation-delay: -3s;
+    bottom: 15px;
+}
+
+
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

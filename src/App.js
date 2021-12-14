@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Login from './components/login/Login.jsx';
+import DashboardHome from './components/Dashboards/DashboardHome/DashboardHome.jsx';
+import DashboardUsuarios from './components/Dashboards/DashboardUsuarios/DashboardUsuarios';
+import Regist from './components/Regist/Regist.jsx';
+import AlertaState from './Context/Alertas/AlertaState';
+import AuthState from './Context/Autenticacion/authState.js';
+import UsuariosState from './Context/Usuarios/usuariosState.js';
+import DashboardAddUser from './components/Dashboards/DashboardAddUser/DashboardAddUser.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <AlertaState>
+        <AuthState>
+          <UsuariosState>
+            <Router>
+              <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/regist" element={<Regist />} />
+                <Route path="/home" element={<DashboardHome />} />
+                <Route path="/usuarios" element={<DashboardUsuarios/>} />
+                <Route path="/usuarios/add" element={<DashboardAddUser/>} />
+              </Routes>
+            </Router>
+          </UsuariosState>
+        </AuthState>
+      </AlertaState>
     </div>
   );
 }
